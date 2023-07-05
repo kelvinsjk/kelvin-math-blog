@@ -1,22 +1,41 @@
 ---
-title: "How to make toys from old Olarpaper"
-description: "meta description"
-date: 2022-04-04T05:00:00Z
+title: "Probability an integer is a fraction"
+description: "probability behind mathlify's generateRandomFrac() method"
+date: 2022-06-04T05:00:00Z
 image: "/images/posts/01.jpg"
-categories: ["art"]
-authors: ["Mark Dinn"]
-tags: ["diy", "toy"]
+categories: ["probability"]
+authors: ["Kelvin Soh"]
+tags: ["mathlify", "generateRandomFrac"]
 draft: false
 ---
 
-Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+We are given a fraction $f = \frac{n}{d}$, such that the non-zero numerator $n$ satisfies $-9 \leq n \leq 9$ and
+the denominator $d$ satisfies $1 \leq n \leq 9$. How many of these fractions $f$ are integers?
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+## Counting by cases
 
-## Creative Design
+### Case 1: $d = 1$
 
-Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+There are 18 possible cases.
 
-> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+### Case 2: $|n|=d$
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+There are 16 additional cases (18 in total but with an overlap of 2 with case 1).
+
+### Case 3: $d=2$
+
+There are 6 cases ($n=\pm 4, \pm 6, \pm 8$)
+
+### Case 4: $d=3$
+
+There are 4 cases ($n=\pm 6, \pm 9$)
+
+### Case 5: $d=4$
+
+There are 2 cases ($n=\pm 8$)
+
+## Results
+
+The total cases add up to $\boxed{46},$ leading to a probability of
+$\boxed{\frac{8}{27}\approx 0.284}$ that the `getRandomFrac` function,
+given the default parameters, will return an integer.
