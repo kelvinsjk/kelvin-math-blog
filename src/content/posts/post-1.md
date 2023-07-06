@@ -1,7 +1,7 @@
 ---
 title: "Probability an integer is a fraction"
 description: "probability behind mathlify's generateRandomFrac() method"
-date: 2022-06-04T05:00:00Z
+date: 2023-06-04T05:00:00Z
 image: "/images/posts/01.jpg"
 categories: ["probability"]
 authors: ["Kelvin Soh"]
