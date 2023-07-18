@@ -1,6 +1,6 @@
 ---
 title: H2 Math 2022 Paper 1 Question 1 Superset
-description: "meta description"
+description: "specifications for the H2 Math 2022 Paper 1 Question 1 Modification"
 date: 2023-07-06T05:00:00Z
 image: "/images/posts/02.jpg"
 categories: ["specifications"]
